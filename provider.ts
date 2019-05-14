@@ -32,13 +32,6 @@ export class DataProvider {
 		.map(this.extractData)
 		.do(this.logResponse)
 		.catch(this.catchError)
-	}
-	s3upload(data, realFile)
-	{
-		return this.http.put(data ,realFile)
-		.map(this.extractData)
-		.do(this.logResponse)
-		.catch(this.catchError)
 	} 
 	private catchError(error: Response | any){
 		console.log(error);
